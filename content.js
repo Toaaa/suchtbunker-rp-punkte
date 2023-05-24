@@ -1,4 +1,4 @@
-﻿chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+﻿browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.action == "fetchHtml") {
         fetchHtml(request.url);
     }

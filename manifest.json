@@ -1,20 +1,16 @@
 ﻿{
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "SuchtBunker - RP-Punkte",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Fügt die RP-Punkte jedes Spielers auf seinem Portalprofil hinzu.",
   "permissions": [
     "activeTab",
     "scripting",
-    "host_permissions"
-  ],
-  "host_permissions": [
-    "*://portal.suchtbunker.de/*",
-    "http://*/",
-    "https://*/"
+    "tabs",
+    "<all_urls>"
   ],
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
@@ -32,5 +28,10 @@
     "32": "icon32.png",
     "48": "icon48.png",
     "128": "icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "suchtbunker-rp-punkte@cartaux.net"
+    }
   }
 }
